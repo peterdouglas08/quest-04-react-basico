@@ -1,25 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import Button from "./components/button/button"
+import Paragraph from './components/paragraph/paragraph';
+
+const corAleatoria = '#' + Math.floor(Math.random()*16777215).toString(16);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    <Paragraph
+    text="Clique abaixo para iniciar o dowload grátis"
+    color={corAleatoria} />
+
+    <Button label='Download vídeo'></Button>
+    </>
+  )
 }
 
 export default App;
